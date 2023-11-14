@@ -1,0 +1,20 @@
+Easy Character Movement follows the single responsibility principle where a given class should be, ideally, responsible for just one task. Thus, the Easy Character Moment system is composed of several classes with specific tasks, being the most important of these, the CharacterMovement component.
+The CharacterMovement component is the core of the ECM system and is responsible to perform all the heavy work to move a character (a.k.a. Character motor), such as apply forces, impulses, constraints, platforms interaction, etc. This is analogous to the Unity's character controller, but unlike the Unity’s character controller, this make use of Rigidbody physics.
+ECM has been developed to be easy and flexible to use, however to operate CharacterMovement requires a Rigidbody, a CapsuleCollider, and GroundDetection component) to be in the same GameObject where CharacterMovement is.
+Here is a suggested set of components your characters should follow:
+
+
+Along the CharacterMovement component, is the GroundDetection, which performs the ground detection and supply this information to the CharacterMovement component.
+Above all, is the controller (eg: BaseCharacterController) which determines how the Character should be moved, such as in response from user input, AI, animation, etc. and feed this information to the CharacterMovement component, which perform the movement.
+Worth note, that the CharacterMovement component by itself will do nothing, you must call
+its Move method to move the character.
+
+
+Should the character slide down of a steep slope?
+
+
+The responsibility of the controller, as stated before, is determine how the Character should be moved, such as in response from user input, AI, animation, etc., and pass this information to the CharacterMovement component, which in response will perform the movement.
+ECM offers 3 different Base (which can be extended) controllers, BaseCharacterController, a general-purpose character controller, BaseAgentController, a base class for NavMeshAgent controlled characters, and BaseFirstPersonController, a base class for typical first-person movement.
+The suggested approach to work with ECM, is extend one of the supplied base controllers (eg: BaseCharacterController), creating a custom character controller derived from base controllers and add custom code to match your game needs (please refer to the included examples), because ultimately no one knows your game better than you!
+Worth note that the use of supplied base controllers is suggested but not mandatory, it is perfectly fine (if preferred) create your own character controller and relay on the GroundDetection and the CharacterMovement components to perform the character movement for you, however, extending one of the ‘Base’ controllers will give you many features
+out of the box and should be preferred.

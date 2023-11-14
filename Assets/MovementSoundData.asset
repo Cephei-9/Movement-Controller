@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f36eddcdfb874b759c357c20d014d2ab, type: 3}
+  m_Name: MovementSoundData
+  m_EditorClassIdentifier: 
+  CrouchingFootStepMultiplayer: 0.031
+  MinimalStepVolumePercent: 0.3
+  StepsSoundData:
+    Clip: {fileID: 0}
+    Clips:
+    - {fileID: 8300000, guid: 72f526a6a9890f643a88e85a61c86c8a, type: 3}
+    - {fileID: 8300000, guid: 0e098c31fd13d8f4093192ff056fa74a, type: 3}
+    - {fileID: 8300000, guid: bcf3246f5bb0acb4eaa0af0b711807f2, type: 3}
+    Volume: 0.502
+    VolumeRandomFactor: 0.426
+    Pitch: 1
+    PitchRandomFactor: 0.448
+  FallSoundData:
+    Clip: {fileID: 8300000, guid: ca4b2865516834f4691f0544b70f4b65, type: 3}
+    Clips: []
+    Volume: 1
+    VolumeRandomFactor: 0
+    Pitch: 1
+    PitchRandomFactor: 0
+  JumpSoundData:
+    Clip: {fileID: 8300000, guid: bcf3246f5bb0acb4eaa0af0b711807f2, type: 3}
+    Clips: []
+    Volume: 0.556
+    VolumeRandomFactor: 0.373
+    Pitch: 0.94
+    PitchRandomFactor: 1
+  CrouchingSoundData:
+    Clip: {fileID: 8300000, guid: 511b8264090115e439f1b424ab78a78e, type: 3}
+    Clips: []
+    Volume: 1
+    VolumeRandomFactor: 0
+    Pitch: 1
+    PitchRandomFactor: 0
+  StandingSoundData:
+    Clip: {fileID: 8300000, guid: 5c882c79e42e2d14d89c7c107c418802, type: 3}
+    Clips: []
+    Volume: 1
+    VolumeRandomFactor: 0
+    Pitch: 1
+    PitchRandomFactor: 0
